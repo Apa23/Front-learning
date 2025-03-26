@@ -1,0 +1,13 @@
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 7fr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+article{
+  text-align: center;
+}
