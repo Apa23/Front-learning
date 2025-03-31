@@ -28,10 +28,16 @@ export type CustomImage = {
   urls: {
     raw: string
   }
-  likes: number
-  user: {
-    name: string
-    bio: string
-    portfolio_url: string
+  links: {
+    html: string
   }
+
+  likes: number
+  user: UserInfo
+}
+
+export type UserInfo = {
+  name: string
+  bio: string
+  portfolio_url: string
 }

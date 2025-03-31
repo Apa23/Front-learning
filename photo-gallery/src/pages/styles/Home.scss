@@ -10,10 +10,26 @@ main {
     text-align: center;
   }
 
+  .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
   .gallery-container {
-    margin: 0 auto;
+    margin:auto;
     width: 100%;
     max-width: 800px;
+    display: flex;
+    flex-direction: column;
     
+  }
+
+  .footer-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 }

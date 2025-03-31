@@ -9,7 +9,7 @@ type ButtonProps = {
 
 const Button = ({ icon, text, onClick }: ButtonProps) => {
   return (
-    <button onClick={onClick} >
+    <button onClick={onClick}>
       {icon}
       {text}
     </button>

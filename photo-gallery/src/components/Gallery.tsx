@@ -1,6 +1,6 @@
 import { CustomImage } from '../config/types'
 import Button from './UI/Button'
-import Card from './UI/Card'
+import Card from './Card'
 import './styles/Gallery.scss'
 
 type GalleryProps = {
@@ -15,8 +15,7 @@ const Gallery = ({ images, onChangeImages }: GalleryProps) => {
         {images.map((image) => (
           <Card
             key={image.id}
-            src={image.urls.raw}
-            alt={image.alt_description}
+            photoInfo={image}
           />
         ))}
       </div>
