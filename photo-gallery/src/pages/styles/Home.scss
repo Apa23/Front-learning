@@ -1,4 +1,3 @@
-
 main {
   height: 100vh;
   display: grid;
@@ -6,8 +5,15 @@ main {
   grid-template-rows: 1fr 7fr 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-}
 
-article{
-  text-align: center;
+  article {
+    text-align: center;
+  }
+
+  .gallery-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    
+  }
 }

@@ -10,7 +10,7 @@ type GalleryProps = {
 
 const Gallery = ({ images, onChangeImages }: GalleryProps) => {
   return (
-    <article className='gallery-container'>
+    <>
       <div className='gallery'>
         {images.map((image) => (
           <Card
@@ -27,11 +27,11 @@ const Gallery = ({ images, onChangeImages }: GalleryProps) => {
             <i
               className='fa-solid fa-circle-arrow-right fa-2xl'
               style={{ color: '#f9fafa' }}
-            ></i>
+            />
           }
         />
       </div>
-    </article>
+    </>
   )
 }
 

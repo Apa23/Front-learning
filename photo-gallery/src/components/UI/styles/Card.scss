@@ -4,7 +4,17 @@
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
-  width: 100%;
-  height: auto;
   box-shadow: 0px 0px 30px #000;
+  height: 38vh;
+
+  img {
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    height: 100%;
+    width: 100%;
+
+  }
 }

@@ -1,18 +1,11 @@
-.gallery-container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 800px;
+.action-button {
+  position: absolute;
+  right: 20px;
+  top: 45vh;
+}
 
-  .action-button {
-    position: absolute;
-    right: 20px;
-    top: 45vh;
-
-  }
-
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 10px;
-  }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
 }
