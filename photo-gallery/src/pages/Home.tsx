@@ -1,4 +1,4 @@
-import { useCallback } from 'react'
+import { useMemo } from 'react'
 import Gallery from '../components/Gallery'
 import Title from '../components/UI/Title'
 import useAxios from '../hooks/useAxios'
@@ -9,7 +9,7 @@ import Error from '../components/Error'
 const Home = () => {
   const { data: imageList, error, loading, fetch } = useAxios(GET_RANDOM_IMAGES)
 
-  const renderContent = useCallback(() => {
+  const renderContent = useMemo(() => {
     if (loading) return <p>Loading...</p>
     if (error) return <Error onClick={fetch} />
     if (!imageList) return <p>No images found</p>
@@ -21,7 +21,7 @@ const Home = () => {
       <article className='header-container'>
         <Title text='Photo Gallery' variant='primary' />
       </article>
-      <article className='gallery-container'>{renderContent()}</article>
+      <article className='gallery-container'>{renderContent}</article>
       <article className='footer-container'>
         <Title text='Made by Andrés Aparicio' variant='secondary' />
         <i

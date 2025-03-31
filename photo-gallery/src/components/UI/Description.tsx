@@ -9,7 +9,7 @@ type DescriptionProps = {
 const Description = ({userInfo, likes}:DescriptionProps) => {
   return <div className='description-container'>
     {userInfo.name && <h3>{userInfo.name}</h3>}
-    {likes && <p>Likes: {likes}</p>}
+    {<p>Likes: {likes}</p>}
   </div>
 }
 
