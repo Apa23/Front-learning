@@ -1,47 +1,54 @@
-# Front-learning
-Personal projects for enhance front end developing skills.
+# React + TypeScript + Vite
 
-## Challenge 1: Responsive Image Gallery
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-**Level:** Junior
+Currently, two official plugins are available:
 
-**Focus:** Coding, UX (styles, animations, and transitions), accessibility.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### Requirements:
+## Expanding the ESLint configuration
 
-✅ Create an image gallery with at least 6 elements.
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-✅ It must be responsive (adapt well to different screen sizes).
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-✅ Add hover effects on the images (e.g., smooth zoom or color change).
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-✅ Implement descriptive alt tags for each image to improve accessibility.
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-✅ Use Flexbox or CSS Grid for layout.
-
-✅ Upload your code to a GitHub repository.
-
-
-**Bonus (Optional):** Fetch Images from an API
-
-## Challenge 2: Optimized Product Catalog with Infinite Scroll
-**Level:** Mid-Junior / Early-Mid
-**Focus:** API consumption, state management, performance, accessibility.
-
-### Requirements:
-
-✅ Build a product catalog using React that fetches data from an API (e.g., FakeStore API).
-
-✅ Implement infinite scroll instead of pagination (load more products when scrolling down).
-
-✅ Optimize performance by caching API responses (use React Context, Zustand, or SWR).
-
-✅ Add accessibility features like keyboard navigation and proper ARIA attributes.
-
-✅ Use lazy loading for images to improve performance.
-
-✅ Deploy your app (e.g., Vercel, Netlify) and share the link.
-
-**Bonus Challenges (Optional but Recommended):**
-🔹 Filter & Sort: Allow users to filter products by category and sort by price.
-🔹 Skeleton Loading: Improve UX by adding skeleton loaders instead of blank spaces.
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+})
+```
