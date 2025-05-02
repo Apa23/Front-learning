@@ -1,0 +1,11 @@
+.action-button {
+  position: absolute;
+  right: 20px;
+  top: 45vh;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+}

@@ -1,0 +1,10 @@
+.error-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    p{
+        padding-bottom: 10px;
+        font-size: 1.2rem;
+    }
+}

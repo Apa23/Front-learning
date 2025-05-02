@@ -1,0 +1,26 @@
+.card {
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  box-shadow: 0px 0px 30px #000;
+  height: 38vh;
+  cursor: pointer;
+
+  img {
+    border-radius: 8px 8px 0 0;
+    height: 80%;
+    width: 100%;
+    -webkit-border-radius: 8px 8px 0 0;
+    -moz-border-radius: 8px 8px 0 0;
+    -ms-border-radius: 8px 8px 0 0;
+    -o-border-radius: 8px 8px 0 0;
+}
+
+  &:hover {
+    scale: 1.05;
+    box-shadow: 0px 0px 50px #000;
+    transition: all 0.3s ease-in-out;
+}
+}
