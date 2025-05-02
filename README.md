@@ -52,3 +52,6 @@ export default tseslint.config({
   },
 })
 ```
+In addition, it has integrated the following packages:
+- SASS: CSS preprocessor for .scss files and modules
+- Axios: For endpoints fetching 
